@@ -1,11 +1,14 @@
 from flask import Flask, render_template
+from books import hent_books
 
 app = Flask(__name__)
+
+bokliste = hent_books()
 
 @app.route("/")
 def index():
     navn = "Hjem"
-    return render_template("index.html", navn=navn)
+    return render_template("index.html", bokliste=bokliste)
 
 @app.route("/onsker")
 def rute_onsker():
