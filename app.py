@@ -8,12 +8,12 @@ def index():
     return render_template("index.html", navn=navn)
 
 @app.route("/onsker")
-def index():
+def rute_onsker():
     navn = "Ønsker å lese"
     return render_template("onsker.html", navn=navn)
 
 @app.route("/lest")
-def index():
+def rute_lest():
     navn = "Leste bøker"
     return render_template("lest.html", navn=navn)
 
