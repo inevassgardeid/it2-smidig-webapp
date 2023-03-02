@@ -1,0 +1,15 @@
+{% extends "mal.html" %}
+
+{% block innhold %}
+
+<article class="bokgrid">
+    {% for bok in bokliste %}
+        <div>
+            <h1>{{bok["title"]}}</h1>
+            <p>{{bok['imageLink']}}</p>
+            <img src="{{url_for('static', filename=bok['imageLink'])}}" alt="">
+        </div>
+    {% endfor %}
+</article>
+
+{% endblock %}}

@@ -8,7 +8,13 @@ bokliste = hent_books()
 @app.route("/")
 def index():
     navn = "Hjem"
-    return render_template("index.html", bokliste=bokliste)
+    return render_template("index.html")
+
+@app.route("/boker")
+def rute_boker():
+    navn = "Bøker"
+    print(bokliste)
+    return render_template("boker.html", bokliste=bokliste)
 
 @app.route("/onsker")
 def rute_onsker():
